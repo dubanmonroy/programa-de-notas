@@ -1,0 +1,177 @@
+#include <stdio.h>
+void exit();
+void ingreso();
+int menu_profesor();
+int menu_estudiante();
+int menu_profe;
+int validarcion(int usuar,int clav);
+int validar(int id_estudiante);
+int usuar;
+int clav;
+int id_estudiante;
+int i,x,n;
+int registrar();
+int arr[10];
+int notas();
+int consultar();
+int promedio();
+int suma=0,pro=0;
+
+int main();
+{
+    while(1)
+    {
+        int menu;
+        printf("colegio");
+        printf("1.profesor\n 2.estudiante \n salir\n");
+        scanf("%d",&menu);
+        switch(menu)
+        {
+            case 1:
+            ingreso();
+            break;
+        }
+
+        {
+            case 2:
+            ingreso();
+            break; 
+        }
+
+        {
+            case 3;
+            exit(1);
+            break;
+        }
+        default;
+        printf("intentelo de nuevo");
+
+
+    }
+
+    int menu_profesor;
+    {
+        printf("1.registrar\n 2.consulta\n,3.salir\n");
+        scanf("%d",&menu_profer);
+        switch(menu_profesor)
+        {
+            case 1:
+            {
+                registrar();
+                notas();
+                break;
+            }
+            case 2:
+            {
+                consultar();   
+            }
+             case 3:
+            {
+                 exit(1);
+                 break;
+            }
+            default:
+            printf("incorrecxto"\n);
+        }
+    }
+    int menu_estudiante;
+    {
+        printf("1.consultar\n 2.consulta_promedio\n,3.ver_notas\n,4.salir\n");
+        scanf("%i",&menu_estudiante);
+        switch(menu_estudiante)
+        {
+            case 1:
+            {
+                consultar();
+                break;              
+            }
+            case 2:
+            {
+                consultar_promedio();
+                break;
+            }
+            case 3:
+            {
+                ver_notas();
+                break;             
+            }
+            case 4:
+            {
+                exit(1);
+                break; 
+            }
+            default:
+            printf("incorrecxto"\n);
+        }
+    }
+    void ingreso();
+    {
+        printf("\n ingresar cuenta\t");
+        scanf("%d",&usuar);
+        printf("\n ingresar contraseña\t");
+        scanf("%d",&clav);
+        x = validarcion(usuar,clav);
+    }
+
+    int validacion( int usuario, int clave);
+    {
+        for (i=0;i<2;i++)
+        {
+            if(d[i].usuario==usuar)
+            {
+                if(d[i].clave==clav)
+                {
+                    return i;
+                    break;
+                }
+                else
+                {
+                    printf("\n clave o usuario incorrectos");
+                    exit(1);
+                }
+            }
+        }
+    }
+    int registrar();
+    {
+        printf("\n ingresar codigo\t");
+        scanf("%d",&id_estudiante);
+        x = validar(id_estudiante);
+        
+        for (i=0;i<1;i++)
+        {
+            if(d[i].usuario==id_estudiante)
+            {
+                return i;
+                break;
+            }
+            else
+            {
+                printf("\n clave o usuario incorrectos");
+                exit(1);
+            }
+        }
+     }
+
+    int notas();
+    {
+        for(n=0;n<10;n++)
+        {
+            printf("ingresar nota%d\n",n+1);
+            scanf("%d",&arr[n]);
+        }
+    }
+
+  
+
+}
+struct profesor d[3]={(987456321,123456789),(784591263,362951847),(147852369,963258741)};
+struct estudiante e[5]={(123654,654123),(548796,365895),(258741,369852),(321456,987456),(951487,362159)}
+struct esrudiante
+{
+    int usuario;
+    int clave;
+    int nota_1;
+    int nota_2;
+    int nota_3;
+}
